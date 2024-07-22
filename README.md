@@ -13,6 +13,12 @@ $$\begin{split}         &\dfrac{\text{d}t}{\text{d}\tau} = U^t, \\
          &\dfrac{\text{d}U^t}{\text{d}\tau} = -\dfrac{1}{r^2\left(1 - \frac{1}{r}\right)}U^r U^t,\\
          &\dfrac{\text{d}U^r}{\text{d}\tau} = -\dfrac{1}{2r^2}\left(1 - \frac{1}{r}\right)(U^t)^2+\dfrac{1}{2r^2\left(1 - \frac{1}{r}\right)}(U^r)^2+(r - 1)(U^\phi)^2,\\
     &\dfrac{\text{d}U^\phi}{\text{d}\tau} = -\dfrac{2}{r}U^rU^\phi.\end{split}$$
+
+The program solves these equations from a given set of initial coordinates $t_0$, $r_0$ and $\phi_0$ and velocities $U^r_0$ and $U^\phi_0$ using the SciPy [``solve_ivp``](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html#solve-ivp) function. To do it employs an implicit Runge-Kutta method. It is then able to plot the trajectory of the particle in the plane.
+
+
+
+    
 ![1706624608850](https://github.com/TobyWoodcock/Black_hole_project/assets/160004842/9a9a7207-4b05-4116-a750-547f86026ba6)
 
 ![BK_orbit-ezgif com-speed](https://github.com/TobyWoodcock/Black_hole_project/assets/160004842/6820cbee-4e94-47f1-88ac-f8c3400444dc)
